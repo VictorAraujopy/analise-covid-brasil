@@ -12,9 +12,6 @@ df['data'] = pd.to_datetime(df['data'])
 casos_por_dia = df.groupby('data')['casosNovos'].sum()
 obitos_por_dia = df.groupby('data')['obitosNovos'].sum()
 
-# Cria a pasta 'graficos' se ela ainda não existir
-
-
 # Gera o gráfico de casos por dia
 plt.figure(figsize=(10, 5))
 casos_por_dia.plot(color='blue')
